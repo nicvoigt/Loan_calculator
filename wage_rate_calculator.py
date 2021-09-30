@@ -35,7 +35,7 @@ for i in range(100):
 
   steuerindex, Bruttogehalt = naechsten_wert_suchen(sorted_list,Bruttogehalt)
 
-  netto = Bruttogehalt * (1-(0.075+ 0.012+ 0.093 + 0.012 + 0.0165)) - new_df.iloc[steuerindex,1]
+  netto = Bruttogehalt * (1-(0.075+ 0.012+ 0.093 + 0.012 + 0.0165)) - tax_rates_preprocessed.iloc[steuerindex,1]
   stundenlohn = netto / Stundenanzahl
   if stundenlohn < Zielstundenlohn:
     Bruttogehalt+=100
